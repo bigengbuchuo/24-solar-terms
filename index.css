@@ -1,0 +1,438 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    list-style: none;
+    text-decoration:none;
+}
+body{
+    background-color: #eee;
+}
+li {
+    width:280px;
+    height:130px;
+    position:relative;
+    /* border:1px solid black; */
+    margin:30px;
+    cursor: pointer;
+}
+.posty {
+    transform: translatex(12px);
+    transition: 0.3s;
+    position:absolute;
+    top:0;
+    right:0;
+    width:200px;
+    height:130px;
+    background-color: #fff;
+    box-shadow: 4px 4px 10px 0 rgba(20, 71, 122, 0.2);
+
+}
+.picsty {
+    transform: rotate(360deg);
+    transition: 1s;
+    position:absolute;
+    top:26px;
+    left:161px;
+    width:76px;
+    height:76px;
+    background-color: #EEE9E9;
+    border-radius: 50%;
+    background-size:100% 100%;
+    box-shadow: 4px 0 8px 0 rgba(119,136,153, 0.2),6px 0 20px 0 rgba(119,136,153, 0.19);
+}
+.botsty {
+    transform: scale(1,1);
+    transition: 0.4s;
+    position: absolute;
+    left:17px;
+    top:53px;
+    width:22px;
+    height:22px;
+    background-color:#B2DFEE;
+    border:0 solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, .2);
+}
+
+
+li .bottom {
+    position: absolute;
+    left:17px;
+    top:53px;
+    width:22px;
+    height:22px;
+    background-color:#B2DFEE;
+    border-radius: 50%;
+    border:6px solid #fff;
+    box-shadow: 0 0 8px 0 rgba(0, 0, 0, .2);
+    transition: 0.4s;
+}
+li .top {
+    position:absolute;
+    top:0;
+    right:0;
+    width:200px;
+    height:130px;
+    background-color: #fff;
+    box-shadow: 4px 4px 10px 0 rgba(20, 71, 122, 0.2);
+    transition: 0.3s;
+}
+li .title {
+    position:absolute;
+    top:0;
+    left:0;
+    width:150px;
+    height:130px;
+    margin-top:10px;
+}
+li .big {
+    position:absolute;
+    top:0;
+    left:0;
+    width:150px;
+    height:60px;
+    position:absolute;
+
+    text-align: center;
+    line-height:40px;
+    font-family:"楷体";
+}
+li .small {
+    position:absolute;
+    top:40px;
+    left:0;
+    width:150px;
+    height:30px;
+    position:absolute;
+
+    text-align: center;
+    line-height:30px;
+    font-family:"楷体";
+}
+li .season {
+    position:absolute;
+    top:70px;
+    left:0;
+    width:150px;
+    height:30px;
+    position:absolute;
+
+    text-align: center;
+    line-height:30px;
+    font-family:"楷体";
+}
+li .pic {
+    position:absolute;
+    top:26px;
+    left:161px;
+    width:76px;
+    height:76px;
+    background-color: #EEE9E9;
+    border-radius: 50%;
+    background-size:100% 100%;
+    box-shadow: 4px 0 8px 0 rgba(119,136,153, 0.2),6px 0 20px 0 rgba(119,136,153, 0.19);
+    transition: 1s;
+}
+.posty::before,
+.top::before {
+    content:"";
+    display:inline-block;
+    position: absolute;
+    width:20px;
+    height:20px;
+    background-color:#fff;
+    top:54px;
+    left:-10px;
+    transform: rotate(45deg);
+    z-index: 5;
+}
+
+.left {
+    position:absolute;
+    top:-13px;
+    left:0;
+
+}
+.right {
+    width:925px;
+    height:591px;
+    position:relative;
+    top:88px;
+    left:508px;
+    /* border:2px solid black; */
+}
+
+
+
+
+.backimg {
+    position:absolute;
+    z-index:-3;
+    background-color:#fff;
+    opacity:0.5;
+    background-image:url(../img/冬.jpg);
+    width:1580px;
+    height:740px;
+    top:0;
+    left:0;
+    background-size:100% 100%;
+}
+.winter {
+    background-image:url(../img/冬.jpg);
+    width:925px;
+    height:591px;
+    position:absolute;
+    top:0;
+    left:0;
+    background-size:100% 100%;
+    opacity:0.8;
+}
+.spring {
+    background-image:url(../img/春.jpg);
+    width:925px;
+    height:591px;
+    position:absolute;
+    top:0;
+    left:0;
+    background-size:100% 100%;
+    opacity:0.8;
+    display:none;
+}
+.summer {
+    background-image:url(../img/夏.jpg);
+    width:925px;
+    height:591px;
+    position:absolute;
+    top:0;
+    left:0;
+    background-size:100% 100%;
+    opacity:0.8;
+    display:none;
+}
+.autumn {
+    background-image:url(../img/秋.jpg);
+    width:925px;
+    height:591px;
+    position:absolute;
+    top:0;
+    left:0;
+    background-size:100% 100%;
+    opacity:0.8;
+    display:none;
+}
+
+.num {
+    position:absolute;
+    top:100px;
+    left:90px;
+    width:100px;
+    height:100px;
+    /* border:1px solid black; */
+    font-size:60px;
+    text-align: center;
+    line-height:100px;
+    color:#fff;
+    font-weight:blod;
+    font-family:"幼圆"；
+}
+.name {
+    position:absolute;
+    top:56px;
+    left:26%;
+    width:142px;
+    height:100px;
+    /* border:1px solid black; */
+    font-size:60px;
+    text-align: center;
+    line-height:100px;
+    font-weight:blod;
+    font-family:"楷体";
+}
+
+.date {
+    position:absolute;
+    top:156px;
+    left:25%;
+    width:163px;
+    height:30px;
+    border:1px solid black;
+    font-size:18px;
+    text-align: center;
+    line-height:31px;
+    font-family:"楷体";
+}
+.glass{
+    position: absolute;
+    top:210px;
+    left:23%;
+    width:207px;
+    height:345px;
+    background:url(../img/冬.jpg) no-repeat;
+    background-size:352% auto;
+    background-position:-200px -155px;
+    filter:blur(30px);
+    z-index:0;
+}
+.xisu {
+    position:absolute;
+    top:210px;
+    left:23%;
+    width:207px;
+    height:345px;
+    border:1px solid black;
+    font-size:12px;
+    padding:10px;
+    /* font-family:"楷体"; */
+    z-index:3;
+    overflow-y: scroll;
+    
+}
+.xisu::-webkit-scrollbar {display:none}
+.glassw{
+    position: absolute;
+    top:210px;
+    left:48%;
+    width:225px;
+    height:344px;
+    background:url(../img/冬.jpg) no-repeat;
+    background-size:352% auto;
+    background-position:-200px -155px;
+    filter:blur(30px);
+    z-index:0;
+    
+}
+.ysh {
+    position:absolute;
+    top:210px;
+    left:48%;
+    width:225px;
+    height:344px;
+    border:1px solid black;
+    font-size:12px;
+    padding:10px;
+    z-index:3;
+    /* font-family:"楷体"; */
+    overflow-y: scroll;
+}
+.ysh::-webkit-scrollbar {display:none}
+.glassth{
+    position: absolute;
+    top:210px;
+    left:75%;
+    width:189px;
+    height:149px;
+    background:url(../img/冬.jpg) no-repeat;
+    background-size:352% auto;
+    background-position:-200px -155px;
+    filter:blur(30px);
+    z-index:0;
+   
+}
+.jianjie {
+    position:absolute;
+    top:210px;
+    left:75%;
+    width:189px;
+    height:149px;
+    border:1px solid black;
+    font-size:12px;
+    padding:10px;
+    overflow: hidden;
+    /* font-family:"楷体"; */
+    overflow-y: scroll;
+}
+.jianjie::-webkit-scrollbar {display:none}
+.glassf{
+    position: absolute;
+    top:373px;
+    left:75%;
+    width:190px;
+    height:180px;
+    background:url(../img/冬.jpg) no-repeat;
+    background-size:352% auto;
+    background-position:-200px -155px;
+    filter:blur(30px);
+    z-index:0;
+    
+}
+.youlai {
+    position:absolute;
+    top:373px;
+    left:75%;
+    width:190px;
+    height:180px;
+    border:1px solid black;
+    font-size:12px;
+    padding:10px;
+    overflow: hidden;
+    /* font-family:"楷体"; */
+    overflow-y: scroll;
+}
+.youlai::-webkit-scrollbar {display:none}
+
+.slide {
+    position:absolute;
+    top:27px;
+    right:0;
+    width:300px;
+    height:300px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.slide ul>li {
+    width:300px;
+    height:60px;
+    margin:0;
+    margin-bottom:10px;
+}
+.slide li>div{
+    position:absolute;
+    top:0;
+    right:0;
+    width:100px;
+    height:60px;
+    margin-left: 200px;
+    transition: width 1.5s;
+    text-align: center;
+    line-height: 60px;
+
+}
+
+.slide .n li {
+    float:left;
+    width:45px;
+    font-size:14px;
+    line-height: 60px;
+    color:#fff;
+}
+.slide .n{
+    overflow: hidden;
+    background: rgba(0, 162, 255, 1);
+}
+.slide .m{
+    background:#E8E8E8;
+}
+.slide li:hover .m{
+    width:0;
+    margin-left: 300px;
+}
+.slide li:hover .n{
+    width:300px;
+    margin-left: 0;
+}
+.screen {
+    position:absolute;
+    top:18px;
+    left:0;
+    width:371px;
+    height:710px;
+    /* border:1px solid black; */
+    overflow-y: scroll;
+    background-image: url(../img/jt.png);
+    background-size:51px;
+    background-repeat:no-repeat;
+    background-position: 33px -208px;
+
+}
+.screen::-webkit-scrollbar {display:none}
